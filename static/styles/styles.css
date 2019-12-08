@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap');
+
+
+body {
+    background-color: #6ed4f0;
+}
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.login-Box {
+    text-align: center;
+    background-color: white;
+    width: 400px;
+    height: 450px;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.profile-box {
+    background-color: #ede2c2;
+    width: 500px;
+    height: 690px;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.edit-Box {
+    text-align: center;
+    background-color: #ede2c2;
+    width: 500px;
+    height: 800px;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.post-box {
+    text-align: left;
+    background-color: white;
+    width: 800px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    height: 100%; 
+    position: fixed; 
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+#forgotpw {
+    font-size: 12px;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#media {
+    font-size: 25px; 
+    display: inline;
+}
+
+#b1, #b2, #b3, #b4 {
+    background-color: #4290ff;
+    color: white;
+    padding: 7px 12px;
+    margin-top: 28px;
+    margin-bottom: 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70%;
+    font-size: 13px;
+}
+
+#b2 {
+    margin-top: 15px;
+}
+
+#b3 {
+    width: 10%;
+    margin-top: 0px;
+}
+
+#b4 {
+    width: 10%;
+    margin-top: 0px;
+    background-color: #b50009;
+}
+
+#image1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+#image2 {
+    height: 60px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    transition: transform 0.5s;
+}
+
+#image3 {
+    height: 35px;
+    text-align: left;
+    margin-left: 50px;
+   
+    display: inline-block;
+}
+
+#image4 {
+    height: 35px;
+    text-align: left;
+    margin-left: 50px;
+    
+    display: inline-block;
+}
+
+#navlogo {
+    height: 120px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.5s;
+}
+
+#profile {
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid black;
+}
+
+#logout {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    margin-left: 53px;
+    font-size: 20px;
+    color: black;
+}
+
+#navlogo:hover { 
+  transform: scale(1.1); 
+}
+
+#image2:hover {
+  transform: scale(1.2); 
+}
+
+input[type=text], input[type=password] {
+    width: 70%;
+    padding: 12px 15px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Pure CSS Select by Rau from CodePen */
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  text-align: center;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+

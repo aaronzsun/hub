@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mail
+{% endblock %}
+
+{% block main %}
+    <h1 id="title"> Mail </h1>
+    <br>
+    <p style = "font-size: 30px; text-align: center"> Friend Requests </p>
+   		<form action="/mail" method="post" style = "text-align: center;">
+   			{% for requests in myList %}
+	    	<p style = "font-size: 20px; font-weight: normal;">{{ requests[0] }}</p>
+	    	<button id="b3" type="submit" value = "accept" name="{{ requests[0] }}">Accept</button>
+	    	<button id="b4" type="submit" value = "reject" name="{{ requests[0] }}">Reject</button><br><br><br>
+	    	{% endfor %}
+    	</form>
+{% endblock %}

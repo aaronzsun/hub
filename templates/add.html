@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add
+{% endblock %}
+
+{% block main %}
+    <h1 id="title"> Add Friends </h1>
+    <br> <br>
+    <p style = "text-align: center; font-size: 30px;"> Search </p> 
+    <form action="/add" method="post">
+        <div class="form-group" style="text-align: center;">
+            <input style = "width: 25%; text-align: center" autocomplete="off" autofocus class="form-control" name="search" placeholder="Search By Username" type="text" maxlength="40" required> <br>
+            <button id="b2" style = "width: 25%;" type="submit" name = "button" value="search">Search</button>
+        </div>       
+   	</form>
+    <div class = "results">
+        <form action="/add" method="post" style = "text-align: center;">
+            {% for result in resultlist %}
+                <p style = "font-size: 20px; text-align: center;">{{ result }}</p>
+                <button id="b3" type="submit" value = "add" name="{{ result }}">Add</button>
+                <button id="b4" type="submit" value = "viewprof" name="{{ result }}">View Profile</button><br><br><br>
+            {% endfor %}
+        </form>
+    </div>  
+{% endblock %}

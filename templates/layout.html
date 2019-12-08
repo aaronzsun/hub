@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="static/styles/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+
+        <title>
+            Hub
+        </title>
+    </head>
+    <body>
+        {% if get_flashed_messages() %}
+            <header>
+                <div style="display: box; background-color: #eda49f; width: 100%; border: 1px solid black; margin-top: 4px; margin-bottom: 4px;">
+                    <p style="text-align: center; font-size: 15px; color: black; font-family: 'Source Sans Pro', sans-serif;">
+                        {{ get_flashed_messages() | join(" ") }}
+                    </p>
+                </div>
+            </header>
+        {% endif %}
+        <br> 
+        <ul id="navbar">
+          <li><a href = "/"><img id = "navlogo" src = "static/logo1.png"><a></li>
+          <li><a href = "/post"><img id = "image2" src = "static/post.png"></a></li>
+          <li><a href = "/profile"><img id = "image2" src = "static/user.png"></a></li>
+          <li><a href = "/friends"><img id = "image2" src = "static/friends.png"></a></li>
+          <li><a href = "/add"><img id = "image2" src = "static/plus.png"></a></li>
+          <li><a href = "/mail"><img id = "image2" src = "static/email.png"></a></li>
+          <li><a href = "/logout" style = "text-decoration: none;"><p id="logout">Logout</p></a></li>
+        </ul>
+        <div style="margin-left:10%;padding:1px 16px;height:100%;">
+          {% block main %}{% endblock %}
+        </div>
+        <script src="static/script.js"></script>
+    </body>
+</html>

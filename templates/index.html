@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h1 id="title"> Home </h1>
+    <br> <br>
+    {% for posts in feed %}
+        <div class = "post-box">
+            <p style = "font-size: 25px; margin-left: 10px;">{{ posts[0] }} posted at {{ posts[1] }}:</p>
+            <p style = "font-size: 15px; margin-left: 10px;">{{ posts[2] }}</p>
+        </div>
+        <br> <br>
+    {% endfor %}
+{% endblock %}

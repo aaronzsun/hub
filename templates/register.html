@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="static/styles/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+
+        <title>
+            Hub
+        </title>
+    </head>
+    <body>
+        {% if get_flashed_messages() %}
+            <header>
+                <div style="display: box; background-color: #eda49f; width: 100%; border: 1px solid black; margin-top: 4px; margin-bottom: 4px;">
+                    <p style="text-align: center; font-size: 15px; color: black; font-family: 'Source Sans Pro', sans-serif;">
+                        {{ get_flashed_messages() | join(" ") }}
+                    </p>
+                </div>
+            </header>
+        {% endif %}
+        <br> <br> <br> <br> <br>
+        <div class = "login-Box">
+            <img id = "image1" src = "static/logo2.png" alt = "logo">
+            <form action="/register" method="post">
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" maxlength="40" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="password" placeholder="Password" type="password" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="confirmation" placeholder="Retype Password" type="password" required>
+                </div>
+                <br>
+                <button id="b2" type="submit">Register Account</button>
+            </form>
+        </div>
+        <script src="static/script.js"></script>
+    </body>
+</html>

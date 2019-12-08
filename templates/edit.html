@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="static/styles/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+
+        <title>
+            Hub
+        </title>
+    </head>
+    <body>
+        {% if get_flashed_messages() %}
+            <header>
+                <div style="display: box; background-color: #eda49f; width: 100%; border: 1px solid black; margin-top: 4px; margin-bottom: 4px;">
+                    <p style="text-align: center; font-size: 15px; color: black; font-family: 'Source Sans Pro', sans-serif;">
+                        {{ get_flashed_messages() | join(" ") }}
+                    </p>
+                </div>
+            </header>
+        {% endif %}
+        <br>
+        <div class = "edit-Box">
+            <img id = "image1" src = "static/logo2.png" alt = "logo">
+            <form action="/edit" method="post">
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" maxlength="40" value = "{{ user }}" required>
+                </div>
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="first" placeholder="First Name" type="text" maxlength="40" value = "{{ first }}" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="last" placeholder="Last Name" type="text" maxlength="40" value = "{{ last }}" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" name="bio" placeholder="Short Bio (50 chars max)" type="text" value = "{{ bio }}" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="fb" placeholder="Facebook URL" type="text" value = "{{ media[0] }}"required>
+                </div>
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="ig" placeholder="Instagram URL" type="text" maxlength="40" value = "{{ media[1] }}" required>
+                </div>
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="twit" placeholder="Twitter URL" type="text" maxlength="40" value = "{{ media[2] }}" required>
+                </div>
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="link" placeholder="LinkedIn URL" type="text" maxlength="40" value = "{{ media[3] }}" required>
+                </div>
+                <div class="form-group">
+                    <input autocomplete="off" autofocus class="form-control" name="password" placeholder="Password" type="password" required>
+                </div>
+                <br>
+                <button id="b2" type="submit">Save Info</button>
+            </form>
+        </div>
+        <script src="static/script.js"></script>
+    </body>
+</html>
