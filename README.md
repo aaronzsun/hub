@@ -34,6 +34,8 @@ Before Running Hub:
 
 Running Hub:
 	To run Hub, first open your terminal. CD into the cs50_hub directory. 
+	
+	IMPORTANT: As of current, the db password is not avaliable to the public.
 
 	Once in the directory, enter "flask_run" (no quotes) into the command line. The terminal should start the server and output various information. You can access Hub through the link provided after "Running on" in the terminal's output.
 
