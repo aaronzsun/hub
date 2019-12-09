@@ -15,4 +15,12 @@
 	    	<button id="b4" type="submit" value = "reject" name="{{ requests[0] }}">Reject</button><br><br><br>
 	    	{% endfor %}
     	</form>
+    <p style = "font-size: 30px; text-align: center"> Direct Messages </p>
+      {% for msg in messages %}
+        <div class = "post-box">
+            <p style = "font-size: 25px; margin-left: 10px;">{{ msg[1] }} messaged you at {{ msg[2] }}:</p>
+            <p style = "font-size: 15px; margin-left: 10px;">{{ msg[0] }}</p>
+        </div>
+        <br> <br>
+    {% endfor %}
 {% endblock %}
