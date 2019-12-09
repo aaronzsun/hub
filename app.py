@@ -37,7 +37,7 @@ Session(app)
 database = mysql.connector.connect(
 		host="remotemysql.com",
 		user="nmtZXktUYG",
-		passwd="8bOMWd6sqX",
+		passwd="***********",
 		database="nmtZXktUYG"
 	)
 
