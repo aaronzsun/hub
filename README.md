@@ -77,11 +77,8 @@ How to Use Hub:
 
 	While I can't control the uptime of the SQL database, restarting the Hub upon encountering database connection errors usually solves the issue.
 
-How to Stop Hub:
-	To stop the Hub flask app from running, go to your terminal and hit "Ctrl + C".
+To stop the Hub flask app from running, go to your terminal and hit "Ctrl + C".
 
-
-Thanks for using Hub!
 
 
 
